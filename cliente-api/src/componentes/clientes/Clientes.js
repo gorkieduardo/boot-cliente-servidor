@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext, Fragment } from 'react';
 // importar cliente axios
 import clienteAxios from '../../config/axios';
 import Cliente from './Cliente';
-//import Spinner from '../layout/Spinner';
+import Spinner from '../layout/Spinner';
 import { Link, withRouter } from 'react-router-dom';
 
 const Clientes = () => {
@@ -20,6 +20,8 @@ const consultarAPI = async ()=>{
 useEffect( () => {
   consultarAPI();
 },[clientes]);
+
+if(!clientes.length) return <Spinner /> 
   
     return (
         <>

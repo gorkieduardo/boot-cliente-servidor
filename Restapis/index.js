@@ -30,5 +30,9 @@ app.use(cors());
 //rutas de la app
 
 app.use('/', routes());
+
+//cargar imágenes
+app.use(express.static('uploads'));
+
 //puerto
 app.listen(5000);

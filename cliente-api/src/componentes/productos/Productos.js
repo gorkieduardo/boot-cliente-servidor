@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // importar cliente axios
 import clienteAxios from '../../config/axios';
 import Producto from './Producto';
-//import Spinner from '../layout/Spinner';
+import Spinner from '../layout/Spinner';
 
 // import el Context
 //import { CRMContext } from '../../context/CRMContext';
@@ -23,11 +23,11 @@ function Productos(props) {
                     guardarProductos(productosConsulta.data);
             }           
             // llamado a la api
-            consultarAPI();   
+            consultarAPI();  
         },[]);
 
     // spinner de carga
-    //if(!productos.length) return <Spinner /> 
+    if(!productos.length) return <Spinner /> 
 
 
     return (
