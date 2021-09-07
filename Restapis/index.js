@@ -12,7 +12,9 @@ const cors = require('cors');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/resapi', {
     useNewUrlParser: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true,
+    useFindAndModify: true,
+    useCreateIndex: true 
 });
 
 

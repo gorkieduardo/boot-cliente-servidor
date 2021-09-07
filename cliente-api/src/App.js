@@ -17,7 +17,7 @@ import EditarProducto from './componentes/productos/EditarProducto';
 import NuevoProducto from './componentes/productos/NuevoProducto';
 
 import Pedidos from './componentes/pedidos/Pedidos';
-//import NuevoPedido from './componentes/pedidos/NuevoPedido';
+import NuevoPedido from './componentes/pedidos/NuevoPedido';
 
 //import Login from './componentes/auth/Login';
 
@@ -48,8 +48,8 @@ function App() {
                             <Route exact path="/productos/nuevo" component={NuevoProducto} />
                             <Route exact path="/productos/editar/:id" component={EditarProducto} />
 
-                            {/* <Route exact path="/pedidos" component={Pedidos} /> */}
-                           {/* <Route exact path="/pedidos/nuevo/:id" component={NuevoPedido} /> */}
+                            <Route exact path="/pedidos" component={Pedidos} />
+                           <Route exact path="/pedidos/nuevo/:id" component={NuevoPedido} />
 
 
                          {/* <Route exact path="/iniciar-sesion" component={Login} /> */}
