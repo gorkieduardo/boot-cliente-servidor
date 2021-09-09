@@ -19,7 +19,7 @@ import NuevoProducto from './componentes/productos/NuevoProducto';
 import Pedidos from './componentes/pedidos/Pedidos';
 import NuevoPedido from './componentes/pedidos/NuevoPedido';
 
-//import Login from './componentes/auth/Login';
+import Login from './componentes/auth/Login';
 
 //import { CRMContext, CRMProvider } from './context/CRMContext';
 
@@ -52,7 +52,7 @@ function App() {
                            <Route exact path="/pedidos/nuevo/:id" component={NuevoPedido} />
 
 
-                         {/* <Route exact path="/iniciar-sesion" component={Login} /> */}
+                         <Route exact path="/iniciar-sesion" component={Login} />
                         </Switch>
                   </main>
               </div>

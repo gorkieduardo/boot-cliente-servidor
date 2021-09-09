@@ -4,10 +4,10 @@ const router = express.Router();
 const clienteController = require('../controllers/clienteController');
 const productosController = require('../controllers/productosController');
 const pedidosController = require('../controllers/pedidosController');
-// const usuariosController = require('../controllers/usuariosController');
+const usuariosController = require('../controllers/usuariosController');
 
 // middle para proteger las rutas
-// const auth = require('../middleware/auth');
+const auth = require('../middleware/auth');
 
 module.exports = function() {
     
@@ -18,6 +18,7 @@ module.exports = function() {
 
     // Obtener todos los clientes
     router.get('/clientes', 
+        auth,
         clienteController.mostrarClientes
     );
 
@@ -84,15 +85,15 @@ module.exports = function() {
     pedidosController.eliminarPedido);
 
 
-    // // Usuarios
-    // router.post('/crear-cuenta', 
-    //     auth,
-    //     usuariosController.registrarUsuario
-    // );
+    // Usuarios
+    router.post('/crear-cuenta', 
+        // auth,
+        usuariosController.registrarUsuario
+    );
 
-    // router.post('/iniciar-sesion',
-    //     usuariosController.autenticarUsuario
-    // );
+    router.post('/iniciar-sesion',
+        usuariosController.autenticarUsuario
+    );
 
     return router;
 }
