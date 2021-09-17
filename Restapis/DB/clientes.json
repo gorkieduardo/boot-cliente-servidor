@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "61245ba50010f31840041953"
+  },
+  "nombre": "Eduardo",
+  "apellido": "Estrada",
+  "empresa": "Centro Cultural CEED",
+  "email": "ceed@gmail.com",
+  "telefono": "76808826",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61245c5a0010f31840041955"
+  },
+  "nombre": "Mariana",
+  "apellido": "Estrada",
+  "empresa": "CEED",
+  "email": "mari@gmail.com",
+  "telefono": "76808826",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61245c750010f31840041957"
+  },
+  "nombre": "Frances",
+  "apellido": "Estrada",
+  "empresa": "CEED",
+  "email": "franki@gmail.com",
+  "telefono": "76808829",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "612576d059f27132bcd3d90a"
+  },
+  "nombre": "Lupita",
+  "apellido": "S. Trumble",
+  "empresa": "CEED",
+  "email": "guadai@gmail.com",
+  "telefono": "76808821",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "612ed91203932418809cc9d6"
+  },
+  "nombre": "Teresita",
+  "apellido": "Estrada",
+  "empresa": "Mundo Gráfico",
+  "email": "tere@gmail.com",
+  "telefono": "49302345",
+  "__v": 0
+}]

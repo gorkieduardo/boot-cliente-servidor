@@ -21,18 +21,18 @@ import NuevoPedido from './componentes/pedidos/NuevoPedido';
 
 import Login from './componentes/auth/Login';
 
-//import { CRMContext, CRMProvider } from './context/CRMContext';
+import { CRMContext, CRMProvider } from './context/CRMContext';
 
 function App() {
 
     // utilizar context en el componente
-   // const [ auth, guardarAuth ] = useContext(CRMContext);
+   const [ auth, guardarAuth ] = useContext(CRMContext);
 
 
     return (
       <Router>
           <Fragment>
-            {/* <CRMProvider value={[ auth, guardarAuth ]}> */}
+            <CRMProvider value={[ auth, guardarAuth ]}>
               <Header />
 
               <div className="grid contenedor contenido-principal">
@@ -56,7 +56,7 @@ function App() {
                         </Switch>
                   </main>
               </div>
-            
+              </CRMProvider>
           </Fragment>
       </Router>
     )

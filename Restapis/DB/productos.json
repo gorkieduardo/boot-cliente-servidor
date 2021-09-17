@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "6127dc150b7cdb1ad8f85b36"
+  },
+  "nombre": "SASC",
+  "precio": 12,
+  "imagen": "W_TycDElH.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6127dc590b7cdb1ad8f85b38"
+  },
+  "nombre": "HTML",
+  "precio": 10,
+  "imagen": "6vuFAJqZ_.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6127dcb70b7cdb1ad8f85b3c"
+  },
+  "nombre": "NodeJS",
+  "precio": 15,
+  "imagen": "dfUV7rwnc.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6127dcd50b7cdb1ad8f85b3e"
+  },
+  "nombre": "ReactNative",
+  "precio": 13,
+  "imagen": "WpDwvPj5S.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6130580428aa22047c4ca53c"
+  },
+  "nombre": "JavaScipt Moderno",
+  "precio": 15,
+  "imagen": "XVaNao1k6.jpeg",
+  "__v": 0
+}]

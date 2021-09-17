@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "6138f0f213f5cb393c27ab34"
+  },
+  "email": "gorki.eduardo@gmail.com",
+  "nombre": "Eugenio ",
+  "password": "$2b$12$kQuqlzS0mJ6/EzQZvoNS3eh/608bJVwYdFomJv3PI/yYW3w0P0nW.",
+  "__v": 0
+}]

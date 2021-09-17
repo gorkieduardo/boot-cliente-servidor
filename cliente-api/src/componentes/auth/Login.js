@@ -4,12 +4,12 @@ import { withRouter } from 'react-router-dom';
 import clienteAxios from '../../config/axios';
 
 // Context
-// import { CRMContext } from '../../context/CRMContext';
+import { CRMContext } from '../../context/CRMContext';
 
 function Login(props){
 
     // Auth y token
-    // const [auth, guardarAuth] = useContext(CRMContext);
+    const [auth, guardarAuth] = useContext(CRMContext);
 
 
     // State con los datos del formulario
@@ -18,23 +18,22 @@ function Login(props){
 
     // iniciar sesión en el servidor
     const iniciarSesion = async e => {
-         e.preventDefault();
+        e.preventDefault();
 
         // autenticar al usuario
 
         try {
             const respuesta = await clienteAxios.post('/iniciar-sesion', credenciales);
-            //console.log(respuesta);
             
             // extraer el token y colocarlo en localstorage
             const { token } = respuesta.data;
             localStorage.setItem('token', token);
 
             // colocarlo en el state
-            // guardarAuth({
-            //     token, 
-            //     auth: true
-            // })
+            guardarAuth({
+                token, 
+                auth: true
+            })
 
             // alerta
             Swal.fire(
@@ -48,12 +47,20 @@ function Login(props){
 
             
         } catch (error) {
-            console.log(error);
+           // console.log(error);
+           if(error.response){
             Swal.fire({
                 type: 'error',
                 title: 'Hubo un error',
                 text: error.response.data.mensaje
             })
+           } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Hubo un error',
+                text: 'Hubo un error'
+            })
+           }  
         }
     }
 
@@ -82,7 +89,7 @@ function Login(props){
                             name="email"
                             placeholder="Email para Iniciar Sesión"
                             required
-                             onChange={leerDatos}
+                            onChange={leerDatos}
                         />
                     </div>
 
@@ -93,7 +100,7 @@ function Login(props){
                             name="password"
                             placeholder="Password para Iniciar Sesión"
                             required
-                             onChange={leerDatos}
+                            onChange={leerDatos}
                         />
                     </div>
 
